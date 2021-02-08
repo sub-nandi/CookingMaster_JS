@@ -1,7 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    margin: 20px;
+    padding: 20px;
+
+}
+.container-main, .navbar{
+    background-color: khaki;
+}
+
+
 .singleMeal{
-    width: 18rem;
+    width: 15rem;
     cursor: pointer;
 }
 #ingredientsWrapper{
     display: none; 
+    border: 2px solid gray;
+    border-radius: 20px;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+ }
+ #ingredientsWrapper img
+ {
+
+     width: 100%;
+ }
+ #mealsWrapper{
+     border-radius: 20px;
+     width: 30%;
+ }
+ #singleMeal img{
+     display: flex;
+
  }

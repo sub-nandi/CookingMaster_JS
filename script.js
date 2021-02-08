@@ -1,5 +1,11 @@
 const submitUserInput = () => {
     const userInput = document.getElementById("mealName").value;
+
+    // // if (userInput == null || userInput !== "" || userInput == undefined) {
+    // //     document.getElementById('mealName').value = "Enter a valid value";
+    // //     document.getElementById('singleMeal').style.display = "none";
+
+    // }
     getAllMealsData(userInput);
 };
 const getAllMealsData = searchInput => {

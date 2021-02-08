@@ -12,75 +12,79 @@
 </head>
 
 <body>
-    <header class="bg-light">
-        <div class="container">
-            <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Cooking Master</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Features</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Pricing</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled" href="#" tabindex="-1"
-                                        aria-disabled="true">Disabled</a>
-                                </li>
+    <div class="container">
+        <div class="container-main">
+            <header class="bg-light">
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-expand-lg ">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">Cooking Master</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">About</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Recipe</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Blog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main class="container mt-5">
+
+
+                <div class="row mb-5">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="input-group">
+                            <input type="text" id="mealName" class="form-control" placeholder="Search">
+                            <div class="input-group-append">
+                                <button onclick="submitUserInput()" id="searchBtn" class="btn btn-success"
+                                    type="button">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                        <span id="warningText" class="fs-6 text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div id="ingredientsWrapper">
+                            <h3>Ingredient List</h3>
+                            <img id="ingredientImg" src="" alt="">
+                            <ul class="list" id="ingredientList">
+
+
                             </ul>
+
                         </div>
                     </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <main class="container mt-5">
+                </div>
 
+                <div class="container mt-5 mb-5" id="singleMeal">
+                    <div class="row singleMeal" id="mealsWrapper">
 
-        <div class="row mb-5">
-            <div class="col-md-6 offset-md-3">
-                <div class="input-group">
-                    <input type="text" id="mealName" class="form-control" placeholder="Search">
-                    <div class="input-group-append">
-                        <button onclick="submitUserInput()" id="searchBtn" class="btn btn-secondary" type="button">
-                            Search
-                        </button>
                     </div>
                 </div>
-                <span id="warningText" class="fs-6 text-danger"></span>
-            </div>
         </div>
-
-        <div class="container">
-            <div class="row">
-                <div id="ingredientsWrapper">
-                    <h3>Ingredient List</h3>
-                    <img id="ingredientImg" src="" alt="">
-                    <ul class="list" id="ingredientList">
-
-
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container mt-5 mb-5">
-            <div class="row singleMeal" id="mealsWrapper">
-
-            </div>
-        </div>
+    </div>
 
 
 
