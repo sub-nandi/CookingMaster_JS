@@ -1,0 +1,7 @@
+.singleMeal{
+    width: 18rem;
+    cursor: pointer;
+}
+#ingredientsWrapper{
+    display: none; 
+ }
