@@ -12,11 +12,12 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container main-section">
         <div class="container-main">
             <header class="bg-light">
                 <div class="container">
                     <div class="row">
+                        <!-- navbar......................... -->
                         <nav class="navbar navbar-expand-lg ">
                             <div class="container-fluid">
                                 <a class="navbar-brand" href="#">Cooking Master</a>
@@ -46,9 +47,8 @@
                     </div>
                 </div>
             </header>
+            <!-- search button............................. -->
             <main class="container mt-5">
-
-
                 <div class="row mb-5">
                     <div class="col-md-6 offset-md-3">
                         <div class="input-group">
@@ -64,6 +64,16 @@
                     </div>
                 </div>
 
+                <!-- Displaying Error Message -->
+
+                <div id="errorMsg">
+                    <h4>
+
+                    </h4>
+                </div>
+
+                <!-- IngredientList ...... -->
+
                 <div class="container">
                     <div class="row">
                         <div id="ingredientsWrapper">
@@ -77,6 +87,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- All meals Wrapper...... -->
 
                 <div class="container mt-5 mb-5" id="singleMeal">
                     <div class="row singleMeal" id="mealsWrapper">

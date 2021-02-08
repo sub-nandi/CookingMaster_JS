@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+.main-section{
+    margin: auto;
+}
 .container{
     margin: 20px;
     padding: 20px;
@@ -9,11 +12,19 @@
 .container-main, .navbar{
     background-color: khaki;
 }
+#errorMsg{
+    text-align: center;
+    background-color: red;
+    color: white;
+    width: 50%;
+    margin: auto;
+}
 
 
 .singleMeal{
     width: 15rem;
     cursor: pointer;
+    margin: auto;
 }
 #ingredientsWrapper{
     display: none; 
@@ -31,9 +42,13 @@
  }
  #mealsWrapper{
      border-radius: 20px;
-     width: 30%;
+     width: 100%;
+     margin: auto;
  }
  #singleMeal img{
      display: flex;
 
+ }
+ .mb-2.singleMeal{
+     width:30%
  }

@@ -1,19 +1,33 @@
 const submitUserInput = () => {
     const userInput = document.getElementById("mealName").value;
 
-    // // if (userInput == null || userInput !== "" || userInput == undefined) {
-    // //     document.getElementById('mealName').value = "Enter a valid value";
-    // //     document.getElementById('singleMeal').style.display = "none";
+    if (userInput == "") {
+        document.getElementById("mealName").value = 'Please Enter a Value first';
+        document.getElementById('singleMeal').style.display = "none";
 
-    // }
-    getAllMealsData(userInput);
+    }
+    else {
+        getAllMealsData(userInput);
+    }
+
+
 };
+
+
+
 const getAllMealsData = searchInput => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
         .then(res => res.json())
-        .then(data => displayUserData(data.meals));
+        .then(data => displayUserData(data.meals))
+        .catch(error => {
+            document.getElementById('errorMsg').innerText = "This Item is not available";
+            document.getElementById("mealName").value = "";
+        });
+
 
 };
+
+
 
 const displayUserData = meals => {
     const parentDiv = document.getElementById("mealsWrapper");
@@ -30,7 +44,11 @@ const displayUserData = meals => {
         parentDiv.innerHTML += childDiv;
 
     });
+    document.getElementById("mealName").value = "";
 };
+
+
+
 
 const getSingleMealDetails = mealId => {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
@@ -44,13 +62,6 @@ const displaySingleMealData = singleMeal => {
     const ingredientImg = document.getElementById("ingredientImg");
     ingredientImg.setAttribute("src", singleMeal.strMealThumb);
     const ingredientLists = document.getElementById("ingredientList");
-
-
-
-
-
-
-
     for (let i = 1; i <= 20; i++) {
         const element = `strIngredient${i}`;
         if (singleMeal[element] != "") {
